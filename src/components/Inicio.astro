@@ -1,0 +1,85 @@
+<div
+  class="bg-black absolute z-50 inset-0 inicio flex justify-center items-center"
+>
+  <div class="inicio-logo"></div>
+</div>
+
+<style>
+  .inicio-logo {
+    width: 400px;
+    height: 400px;
+    background: url(../../public/logo/1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: inicioLogo 2s cubic-bezier(0.5, 0.2, 0.3, 1);
+    opacity: 0;
+  }
+
+  @keyframes inicioLogo {
+    0% {
+    }
+
+    40% {
+      opacity: 1;
+    }
+    95% {
+      background: url(../../public/logo/1.png) no-repeat;
+      background-size: contain;
+    }
+    95.5% {
+      background: url(../../public/logo/2.png) no-repeat;
+      background-size: contain;
+    }
+    95.6% {
+      background: url(../../public/logo/3.png) no-repeat;
+      background-size: contain;
+    }
+    95.7% {
+      background: url(../../public/logo/4.png) no-repeat;
+      background-size: contain;
+    }
+    95.8% {
+      background: url(../../public/logo/5.png) no-repeat;
+      background-size: contain;
+    }
+    95.9% {
+      background: url(../../public/logo/2.png) no-repeat;
+      background-size: contain;
+    }
+    96% {
+      background: url(../../public/logo/4.png) no-repeat;
+      background-size: contain;
+    }
+    96.3% {
+      background: url(../../public/logo/3.png) no-repeat;
+      background-size: contain;
+    }
+    96.5% {
+      background: url(../../public/logo/5.png) no-repeat;
+      background-size: contain;
+    }
+    96% {
+      background: url(../../public/logo/2.png) no-repeat;
+      background-size: contain;
+      opacity: 1;
+      transform: translate(0%);
+    }
+    97% {
+      background: url(../../public/logo/1.png) no-repeat;
+      background-size: contain;
+      opacity: 0;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Obtener la referencia a la imagen
+    var imagen = document.querySelector(".inicio") as HTMLElement;
+
+    // Esperar un tiempo determinado antes de ocultar la imagen (por ejemplo, 3 segundos)
+    setTimeout(function () {
+      imagen.style.display = "none"; // Ocultar la imagen estableciendo el estilo 'display' a 'none'
+    }, 2000); // 3000 milisegundos = 3 segundos
+  });
+</script>
